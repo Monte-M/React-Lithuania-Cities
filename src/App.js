@@ -1,11 +1,18 @@
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import MyBtn from "./components/MyBtn";
+
+import Navbar from "./components/Navbar";
+import CounterPage from "./Pages/CounterPage";
 
 function App() {
   return (
     <div>
-      <h2>App</h2>
-      <MyBtn />
+      <Navbar />
+      <Switch>
+        <Route path="/counter">
+          <CounterPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
