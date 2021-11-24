@@ -34,12 +34,16 @@ function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Redux
           </Typography>
-          <NavLink to="/" color="inherit">
-            Home
-          </NavLink>
-          <NavLink to="/counter" color="inherit">
-            Counter
-          </NavLink>
+          {auth && (
+            <>
+              <NavLink to="/" color="inherit">
+                Home
+              </NavLink>
+              <NavLink to="/counter" color="inherit">
+                Counter
+              </NavLink>
+            </>
+          )}
           {!auth && (
             <Button variant="contained" onClick={handleLogin}>
               Login
