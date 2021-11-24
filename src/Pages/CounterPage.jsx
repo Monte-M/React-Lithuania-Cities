@@ -1,9 +1,10 @@
+import { Typography } from "@mui/material";
 import React from "react";
 
 function CounterPage() {
   return (
     <div>
-      <h2>CounterPage</h2>
+      <Typography>CounterPage</Typography>
     </div>
   );
 }
