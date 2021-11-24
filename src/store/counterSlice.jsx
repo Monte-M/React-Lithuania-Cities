@@ -1,13 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initState = { counter: 0 };
-
 const counterSlice = createSlice({
   name: "counter",
-  initialState: initState,
+  initialState: { counter: 0 },
   reducers: {
     increase(state) {
-      state.counter++; // toolkit naudoja immer paketa tam, kad isvengti mutacijos
+      state.counter++;
     },
     decrease(state) {
       state.counter--;

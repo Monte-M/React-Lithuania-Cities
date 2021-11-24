@@ -3,8 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
+import CityPage from "./Pages/CityPage";
 import CounterPage from "./Pages/CounterPage";
-import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <CounterPage />
         </Route>
         <Route exact path="/">
-          <HomePage />
+          <CityPage />
         </Route>
         <Route path="*">
           <h2>Page not found</h2>
