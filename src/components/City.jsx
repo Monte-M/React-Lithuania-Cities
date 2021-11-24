@@ -12,12 +12,7 @@ function City({ city, about, image }) {
   return (
     <Card sx={{ maxWidth: 345, m: 2 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="250"
-          image={image}
-          alt="green iguana"
-        />
+        <CardMedia component="img" height="250" image={image} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {city}

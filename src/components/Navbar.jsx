@@ -1,7 +1,9 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/styles";
 import { Box } from "@mui/system";
+import { useDispatch, useSelector } from "react-redux";
+import { authActions } from "../store/store";
 
 const Nav = styled(AppBar)({
   backgroundColor: "#333",
@@ -14,6 +16,17 @@ const NavLink = styled(Link)({
 });
 
 function Navbar() {
+  const auth = useSelector((state) => state.auth.authentication);
+
+  const dispatch = useDispatch();
+
+  const handleLogin = () => {
+    dispatch(authActions.login());
+  };
+  console.log(auth);
+  const handleLogout = () => {
+    dispatch(authActions.logout());
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Nav position="static">
@@ -27,6 +40,20 @@ function Navbar() {
           <NavLink to="/counter" color="inherit">
             Counter
           </NavLink>
+          {!auth && (
+            <Button variant="contained" onClick={handleLogin}>
+              Login
+            </Button>
+          )}
+          {auth && (
+            <Button
+              sx={{ backgroundColor: "red" }}
+              variant="contained"
+              onClick={handleLogout}
+            >
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </Nav>
     </Box>

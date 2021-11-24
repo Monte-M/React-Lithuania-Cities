@@ -21,7 +21,7 @@ const ButtonContainer = styled(Box)({
 
 const CounterButton = styled(Button)({
   margin: "5px",
-  backgroundColor: "#333",
+  backgroundColor: "purple",
 });
 
 function CounterPage() {
