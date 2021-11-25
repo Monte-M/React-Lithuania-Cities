@@ -37,7 +37,7 @@ function Navbar() {
           {auth && (
             <>
               <NavLink to="/" color="inherit">
-                Home
+                Cities
               </NavLink>
               <NavLink to="/counter" color="inherit">
                 Counter
