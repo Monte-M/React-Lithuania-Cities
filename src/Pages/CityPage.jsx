@@ -12,8 +12,6 @@ const CityContainer = styled(Container)({
 function CityPage() {
   const cities = useSelector((state) => state.cities.city);
 
-  console.log(cities);
-
   return (
     <CityContainer>
       {cities.map(({ city, about, image }) => (

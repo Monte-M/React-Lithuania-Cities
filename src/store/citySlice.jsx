@@ -50,3 +50,5 @@ const citySlice = createSlice({
 });
 
 export default citySlice;
+
+export const cityActions = citySlice.actions;
